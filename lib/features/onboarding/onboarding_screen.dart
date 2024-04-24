@@ -1,6 +1,6 @@
-import 'package:doctor_app/features/onboarding/widgets/doc_image_and_text.dart';
-import 'package:doctor_app/features/onboarding/widgets/doc_logo_and_name.dart';
-import 'package:doctor_app/features/onboarding/widgets/doc_text_and_button.dart';
+import 'package:clinic_management/features/onboarding/widgets/doc_image_and_text.dart';
+import 'package:clinic_management/features/onboarding/widgets/doc_logo_and_name.dart';
+import 'package:clinic_management/features/onboarding/widgets/doc_text_and_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

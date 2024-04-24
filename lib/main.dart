@@ -1,10 +1,11 @@
-import 'package:doctor_app/core/routing/app_router.dart';
-import 'package:doctor_app/doc_app.dart';
+
+import 'package:clinic_management/core/routing/app_router.dart';
+import 'package:clinic_management/clinic_management_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   
-  runApp(DocApp(
+  runApp(ClinicManegementApp(
     appRouter: AppRouter(),
   ));
 }

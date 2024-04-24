@@ -1,6 +1,6 @@
-import 'package:doctor_app/core/routing/routes.dart';
-import 'package:doctor_app/features/login/views/login_screen.dart';
-import 'package:doctor_app/features/onboarding/onboarding_screen.dart';
+import 'package:clinic_management/core/routing/routes.dart';
+import 'package:clinic_management/features/onboarding/onboarding_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -10,10 +10,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),
         );
-      case Routes.loginScreen:
-        return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
-        );
+
       // case Routes.signUpScreen:
       //   return MaterialPageRoute(
       //     builder: (_) => BlocProvider(
