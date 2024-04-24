@@ -1,5 +1,5 @@
-import 'package:doctor_app/core/theming/app_colors.dart';
-import 'package:doctor_app/core/theming/app_font_weight.dart';
+import 'package:clinic_management/core/theming/app_colors.dart';
+import 'package:clinic_management/core/theming/app_font_weight.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
