@@ -6,6 +6,6 @@ import 'package:flutter/material.dart';
 void main() {
   
   runApp(ClinicManegementApp(
-    appRouter: AppRouter(),
+    appRouter: AppRouter(), 
   ));
 }
