@@ -1,8 +1,11 @@
+import 'package:clinic_management/core/di/dependency_injection.dart';
 import 'package:clinic_management/core/routing/routes.dart';
+import 'package:clinic_management/features/login/logic/cubit/login_cubit.dart';
 import 'package:clinic_management/features/login/views/login_screen.dart';
 import 'package:clinic_management/features/onboarding/onboarding_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -13,7 +16,10 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+            child: const LoginScreen(),
+          ),
         );
 
       // case Routes.signUpScreen:
