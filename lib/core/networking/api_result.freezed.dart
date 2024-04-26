@@ -12,7 +12,7 @@ part of 'api_result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ApiResult<T> {
@@ -107,27 +107,19 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
+class _$SuccessImpl<T> implements Success<T> {
   const _$SuccessImpl(this.data);
 
   @override
   final T data;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ApiResult<$T>.success(data: $data)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ApiResult<$T>.success'))
-      ..add(DiagnosticsProperty('data', data));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl<T> &&
@@ -249,27 +241,19 @@ class __$$FailureImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$FailureImpl<T> with DiagnosticableTreeMixin implements Failure<T> {
+class _$FailureImpl<T> implements Failure<T> {
   const _$FailureImpl(this.errorHandler);
 
   @override
   final ErrorHandler errorHandler;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ApiResult<$T>.failure(errorHandler: $errorHandler)';
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ApiResult<$T>.failure'))
-      ..add(DiagnosticsProperty('errorHandler', errorHandler));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailureImpl<T> &&
