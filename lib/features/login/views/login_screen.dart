@@ -1,6 +1,5 @@
 import 'package:clinic_management/core/helpers/spacing.dart';
 import 'package:clinic_management/core/theming/app_styles.dart';
-import 'package:clinic_management/features/login/data/models/login_request_body.dart';
 import 'package:clinic_management/features/login/logic/cubit/login_cubit.dart';
 import 'package:clinic_management/features/login/views/widgets/login_bloc_listener.dart';
 import 'package:flutter/material.dart';
@@ -70,9 +69,13 @@ class LoginScreen extends StatelessWidget {
 
   void doLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
-          email: context.read<LoginCubit>().emailController.text,
-          password: context.read<LoginCubit>().passwordController.text));
+      context.read<LoginCubit>().emitLoginStates();
     }
+
+    // if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+    //   context.read<LoginCubit>().emitLoginStates(LoginRequestBody(
+    //       email: context.read<LoginCubit>().emailController.text,
+    //       password: context.read<LoginCubit>().passwordController.text));
+    // }
   }
 }
