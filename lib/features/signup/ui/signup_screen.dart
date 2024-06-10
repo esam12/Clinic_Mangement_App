@@ -1,6 +1,6 @@
 import 'package:clinic_management/core/helpers/spacing.dart';
 import 'package:clinic_management/core/theming/app_styles.dart';
-import 'package:clinic_management/core/widgets/app_text_button.dart';
+import 'package:clinic_management/core/common/widgets/app_text_button.dart';
 import 'package:clinic_management/features/login/views/widgets/terms_and_conditions_text.dart';
 import 'package:clinic_management/features/signup/logic/cubit/singup_cubit.dart';
 import 'package:clinic_management/features/signup/ui/widgets/already_have_account_text.dart';

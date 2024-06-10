@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
+import '../../../../core/common/widgets/app_text_form_field.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
