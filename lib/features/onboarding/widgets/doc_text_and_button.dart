@@ -1,4 +1,3 @@
-
 import 'package:clinic_management/core/helpers/extensions.dart';
 import 'package:clinic_management/core/routing/routes.dart';
 import 'package:clinic_management/core/theming/app_colors.dart';
@@ -23,19 +22,18 @@ class DocTextAndButton extends StatelessWidget {
           SizedBox(height: 30.h),
           TextButton(
             style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor),
+                backgroundColor: WidgetStateProperty.all(AppColor.primaryColor),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                minimumSize: MaterialStateProperty.all(
+                minimumSize: WidgetStateProperty.all(
                   const Size(double.infinity, 52),
                 ),
-                shape: MaterialStateProperty.all(
+                shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
                 )),
             onPressed: () {
-              context.pushNamed(Routes.loginScreen);
+              context.pushNamed(Routes.homeScreen);
             },
             child: Text(
               'Get Started',

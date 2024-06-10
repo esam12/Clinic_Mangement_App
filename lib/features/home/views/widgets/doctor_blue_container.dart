@@ -11,30 +11,36 @@ class DoctorBlueContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 195.h,
+      height: 197.h,
       child: Stack(
+        clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
         children: [
           Container(
             width: double.infinity,
-            height: 175.h,
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+            height: 167.h,
+            padding: EdgeInsets.fromLTRB(18.w, 12.h, 31.w, 15.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.r),
               color: AppColor.primaryColor,
               image: const DecorationImage(
-                  image: AssetImage(DImages.imagesBgBlueCard),
-                  fit: BoxFit.cover),
+                image: AssetImage(DImages.imagesBgBlueCard),
+                fit: BoxFit.fill,
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Book and\nschedule with\nnearest doctor',
-                  style: AppStyles.font18WhiteMedium,
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    'Book and\nschedule with\nnearest doctor',
+                    style: AppStyles.font18WhiteMedium,
+                  ),
                 ),
                 verticalSpace(16.h),
                 Expanded(
+                  flex: 2,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -53,11 +59,11 @@ class DoctorBlueContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 0,
+            top: 8.h,
             right: 8.w,
             child: Image.asset(
               DImages.imagesHomeDoctorCard,
-              height: 200.h,
+              //height: 200.h,
             ),
           ),
         ],
