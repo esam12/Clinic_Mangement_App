@@ -5,7 +5,7 @@ import 'package:clinic_management/features/login/views/widgets/login_bloc_listen
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/widgets/app_text_button.dart';
+import '../../../core/common/widgets/app_text_button.dart';
 import 'widgets/dont_have_account_text.dart';
 import 'widgets/email_and_password.dart';
 import 'widgets/terms_and_conditions_text.dart';

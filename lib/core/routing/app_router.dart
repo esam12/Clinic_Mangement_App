@@ -1,5 +1,6 @@
 import 'package:clinic_management/core/di/dependency_injection.dart';
 import 'package:clinic_management/core/routing/routes.dart';
+import 'package:clinic_management/features/home/views/home_screen.dart';
 import 'package:clinic_management/features/login/logic/cubit/login_cubit.dart';
 import 'package:clinic_management/features/login/views/login_screen.dart';
 import 'package:clinic_management/features/onboarding/onboarding_screen.dart';
@@ -31,10 +32,10 @@ class AppRouter {
             child: const SignupScreen(),
           ),
         );
-      // case Routes.homeScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const HomeScreen(),
-      //   );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
