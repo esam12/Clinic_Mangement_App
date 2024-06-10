@@ -1,6 +1,14 @@
 class DImages {
   DImages._();
   
+  /// Assets for imagesBgBlueCard
+  /// assets/images/bg_blue_card.png
+  static const String imagesBgBlueCard = "assets/images/bg_blue_card.png";
+
+  /// Assets for imagesHomeDoctorCard
+  /// assets/images/home_doctor_card.png
+  static const String imagesHomeDoctorCard = "assets/images/home_doctor_card.png";
+
   /// Assets for imagesOnboardingDoctor
   /// assets/images/onboarding_doctor.png
   static const String imagesOnboardingDoctor = "assets/images/onboarding_doctor.png";
