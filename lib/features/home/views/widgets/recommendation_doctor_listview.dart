@@ -1,45 +1,19 @@
-import 'package:clinic_management/core/constants/image_strings.dart';
-import 'package:clinic_management/core/helpers/spacing.dart';
-import 'package:clinic_management/core/theming/app_styles.dart';
+import 'package:clinic_management/features/home/data/models/specialization_response_model.dart';
+import 'package:clinic_management/features/home/views/widgets/doctor_listview_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendationDoctorListview extends StatelessWidget {
-  const RecommendationDoctorListview({super.key});
+  final List<Doctors?>? doctorsListModel;
+  const RecommendationDoctorListview({super.key, this.doctorsListModel});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: 6,
+        itemCount: doctorsListModel?.length ?? 0,
         itemBuilder: (context, index) {
-          return Container(
-            margin: EdgeInsets.only(bottom: 16.h),
-            decoration:
-                BoxDecoration(borderRadius: BorderRadius.circular(16.r)),
-            child: Row(
-              children: [
-                Image.asset(
-                  DImages.imagesRecommendationDoctor1,
-                  width: 110.w,
-                  height: 120.h,
-                  fit: BoxFit.cover,
-                ),
-                horizontalSpace(16.h),
-                Column(
-                  children: [
-                    Text('Dr. Randy Wigham',
-                        style: AppStyles.font16DarkDarkBlueBold),
-                    verticalSpace(8.h),
-                    Text('Degree | +905377021105',
-                        style: AppStyles.font12GreyMedium),
-                    verticalSpace(8.h),
-                    Text('Email | randy@gmail.com',
-                        style: AppStyles.font12GreyMedium),
-                  ],
-                ),
-              ],
-            ),
+          return DoctorsListViewItem(
+            doctorsModel: doctorsListModel?[index],
           );
         },
       ),
