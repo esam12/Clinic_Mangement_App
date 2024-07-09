@@ -1,10 +1,10 @@
 import 'package:clinic_management/core/common/texts/section_heading.dart';
 import 'package:clinic_management/core/helpers/spacing.dart';
+import 'package:clinic_management/features/home/views/widgets/doctors_list/doctor_bloc_builder.dart';
 import 'package:clinic_management/features/home/views/widgets/doctor_blue_container.dart';
 import 'package:clinic_management/features/home/views/widgets/home_top_bar.dart';
-import 'package:clinic_management/features/home/views/widgets/specializations_and_doctors_bloc_builder.dart';
+import 'package:clinic_management/features/home/views/widgets/specializations_list/specializations_bloc_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -21,10 +21,12 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HomeTopBar(),
               const DoctorBlueContainer(),
-              verticalSpace(24.h),
+              verticalSpace(24),
               const DSectionHeader(title: 'Doctor Speciality'),
-              verticalSpace(16.h),
-              const SpecializationsAndDoctorsBlocBuilder(),
+              verticalSpace(16),
+              const SpecializationsBlocBuilder(),
+              verticalSpace(8),
+              const DoctorBlocBuilder(),
             ],
           ),
         ),

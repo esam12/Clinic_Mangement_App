@@ -1,4 +1,4 @@
-
+import 'package:clinic_management/core/constants/constants.dart';
 import 'package:clinic_management/core/routing/app_router.dart';
 import 'package:clinic_management/core/routing/routes.dart';
 import 'package:clinic_management/core/theming/app_colors.dart';
@@ -15,14 +15,13 @@ class ClinicManegementApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        
         title: 'Doc App',
         theme: ThemeData(
           primaryColor: AppColor.primaryColor,
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
