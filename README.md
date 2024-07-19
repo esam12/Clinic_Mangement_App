@@ -4,13 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# Appointment Mobile App
 
-A few resources to get you started if this is your first Flutter project:
+This is a mobile application for scheduling and managing appointments. The app allows users to book, cancel, and manage their appointments with ease.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
+- User registration and login
+- Appointment booking and scheduling
+- Appointment management (view, edit, cancel)
+- Notifications and reminders for upcoming appointments
+- User profile management
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+![Isam- Appointment App](https://github.com/user-attachments/assets/57f092a0-0ded-46a4-93b8-47f4102d1a28)
+
