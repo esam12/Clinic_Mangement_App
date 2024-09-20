@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SpecialityListview extends StatefulWidget {
   final List<SpecializationsData?> specializationList;
-  const SpecialityListview({super.key,required this.specializationList});
+  const SpecialityListview({super.key, required this.specializationList});
 
   @override
   State<SpecialityListview> createState() => _SpecialityListviewState();

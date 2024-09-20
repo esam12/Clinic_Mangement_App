@@ -48,7 +48,7 @@ class SpecialityListViewItem extends StatelessWidget {
         verticalSpace(8.h),
         Text(
           data?.name ?? '',
-          style: selectedIndex == itemIndex
+          style: itemIndex == selectedIndex
               ? AppStyles.font14DarkBlueBold
               : AppStyles.font12BlueRegular.copyWith(color: AppColor.darkBlue),
         )
